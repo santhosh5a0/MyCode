@@ -1,0 +1,31 @@
+This is App Component
+<!--
+<app-databinding></app-databinding>
+<app-directive></app-directive>-->
+<!--
+//<div app-servers></div>
+//<div class="app-servers"></div>
+
+-->
+<!--  -->
+<!--
+DataSharing
+
+<div>
+<app-component-data-sharing>
+</app-component-data-sharing></div>-->
+
+<!-- Services>
+<app-services></app-services>-->
+
+<!-- Services directive
+<app-directives></app-directives>-->
+<!--
+1. /a loads domain/a
+2. routerLink="a" or routerLink="./a" in this case persent url+ a
+3. routerLink="../a" go backwards two steps
+ -->
+<a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact : true}">main</a>
+<a routerLink="/a" routerLinkActive="active">Directive</a>
+<a routerLink="/b" routerLinkActive="active">basic</a>
+<router-outlet></router-outlet>

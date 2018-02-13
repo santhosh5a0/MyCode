@@ -1,0 +1,14 @@
+
+
+<div>Srtring interpolation {{num}}
+<!-- 1.you can also call methods  -->
+</div>
+<div>property binding <button [disabled]="checbuttonstatus">test me</button></div>
+<div>event binding
+  <input type="text" (input)="sendMsg($event)" >
+<button (click)="sendMsg($event)">test method</button>
+
+</div>
+<div>2 way binding  <input type="text" [(ngModel)]="test1" >
+
+</div>

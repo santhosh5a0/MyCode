@@ -1,0 +1,27 @@
+  <!--<p *ngIf="firstNavParam; else noServer">
+  directive works!
+</p>
+{{firstNavParam}}
+  <button (click)="sendMsg($event)">remove server</button>
+<ng-template #noServer><p>No server</p><ng-template>
+ -->
+
+<div>attribute directive</div>
+  <!--
+<p [ngStyle]="{backgroundColor: getcolor()}">
+  directive1 works!
+</p>
+ -->
+ <p [ngClass]="{online:firstNavParam===true}">
+   directive1 works!
+ </p>
+
+  <!--
+strutural directive
+1>*ngif
+2>*ngFor
+<p *ngFor="let server of servers">{{server}}</p>
+<p *ngFor="let server of servers; let i = index">{{server}}</p>
+attribute directive
+1>ngStyle
+ -->

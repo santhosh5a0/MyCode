@@ -1,0 +1,19 @@
+<p  [ngClass]="{MyClass:myval===true}" >
+  directives works!
+</p>
+<p [ngStyle]="{backgroundColor:myval!==true? 'blue': 'yellow'}">
+  directives3231 works!
+</p>
+
+<p basic>
+  basic directive works!
+</p>
+
+<p *appUnlessStructual="true">
+  appUnlessStructual directive works!
+</p>
+<div [ngSwitch]="5">
+  <p *ngSwitchCase="5">value is 5</p>
+  <p *ngSwitchCase="15">value is 15</p>
+<p *ngSwitchDefault>value is ngSwitchDefault</p>
+</div>
