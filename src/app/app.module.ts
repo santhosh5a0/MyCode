@@ -18,13 +18,14 @@ import { UnlessStructualDirective } from './directives/unless-structual.directiv
 import { ServicesComponent } from './services/services.component';
 import { RoutesComponent } from './routes/routes.component';
 import { Routes2Component } from './routes/routes2/routes2.component';
+import { AppRoutingModule } from './app-routing.module';
+import {AuthService} from './auth.service'
+import {AuthGuard} from './auth-guard.service';
+import { ObservableComponent } from './observable/observable.component'
+import {UsersService} from './users.service';
 
-const AppRoutes:Routes=[
-  {path:'',component:RoutesComponent},
-  {path:'a',component:DirectiveComponent},
-  {path:'b',component:DirectivesComponent},
-  {path:'c/:id',component:Routes2Component}
-]
+
+
 
 @NgModule({
   declarations: [
@@ -41,15 +42,17 @@ const AppRoutes:Routes=[
     UnlessStructualDirective,
     ServicesComponent,
     RoutesComponent,
-    Routes2Component
+    Routes2Component,
+    ObservableComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpClientModule,
-    RouterModule.forRoot(AppRoutes)
+  //  RouterModule.forRoot(AppRoutes)
+  AppRoutingModule
   ],
-  providers: [],
+  providers: [AuthService,AuthGuard,UsersService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

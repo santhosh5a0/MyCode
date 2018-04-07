@@ -26,6 +26,6 @@ DataSharing
 3. routerLink="../a" go backwards two steps
  -->
 <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact : true}">main</a>
-<a routerLink="/a" routerLinkActive="active">Directive</a>
+<a routerLink="/a" routerLinkActive="active">Directive{{Useractivated?'(activated)':''}}</a>
 <a routerLink="/b" routerLinkActive="active">basic</a>
 <router-outlet></router-outlet>
