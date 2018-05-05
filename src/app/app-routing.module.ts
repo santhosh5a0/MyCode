@@ -9,12 +9,13 @@ import { Routes2Component } from './routes/routes2/routes2.component';
 import {AuthService} from './auth.service'
 import {AuthGuard} from './auth-guard.service'
 import { ObservableComponent } from './observable/observable.component'
-
+import { TemplateDrivenComponent } from './template-driven/template-driven.component';
+import { ReactiveFormsComponent } from './reactive-forms/reactive-forms.component';
 
 
 
 const AppRoutes:Routes=[
-  {path:'',component:ObservableComponent},
+  {path:'',component:ReactiveFormsComponent},
   {path:'a',component:DirectiveComponent},
   {path:'b',canActivate:[AuthGuard],component:DirectivesComponent},
   //you can pass value to the compoenent form here

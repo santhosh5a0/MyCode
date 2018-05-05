@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Routes,RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { ServersComponent } from './servers/servers.component';
@@ -23,6 +24,8 @@ import {AuthService} from './auth.service'
 import {AuthGuard} from './auth-guard.service';
 import { ObservableComponent } from './observable/observable.component'
 import {UsersService} from './users.service';
+import { TemplateDrivenComponent } from './template-driven/template-driven.component';
+import { ReactiveFormsComponent } from './reactive-forms/reactive-forms.component';
 
 
 
@@ -43,12 +46,15 @@ import {UsersService} from './users.service';
     ServicesComponent,
     RoutesComponent,
     Routes2Component,
-    ObservableComponent
+    ObservableComponent,
+    TemplateDrivenComponent,
+    ReactiveFormsComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpClientModule,
+    ReactiveFormsModule,
   //  RouterModule.forRoot(AppRoutes)
   AppRoutingModule
   ],
