@@ -39,9 +39,9 @@
       <div formArrayName="hobbies">
 Your hobbies
   <button class="btn btn-primary" type="button" (click)="AddHobby()">Add Hobby</button>
-  <div class="form-group" *ngFor="let hobbyControl of signUpForm.get('hobbies').controls; let j = index">
+  <!-- <div class="form-group" *ngFor="let hobbyControl of signUpForm.get('hobbies').controls; let j = index">
 <input type="text" class="form-control" [formControlName]="j">
-  </div>
+  </div> -->
       </div>
         <div class="radio" *ngFor="let gender of genders">
           <label>

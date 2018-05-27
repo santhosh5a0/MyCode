@@ -7,7 +7,7 @@ import { DirectiveComponent } from './directive-old/directive.component';
 import { DirectivesComponent } from './directives/directives.component';
 import { Routes2Component } from './routes/routes2/routes2.component';
 import {AuthService} from './auth.service'
-import {AuthGuard} from './auth-guard.service'
+//import {AuthGuard} from './auth-guard.service'
 import { ObservableComponent } from './observable/observable.component'
 import { TemplateDrivenComponent } from './template-driven/template-driven.component';
 import { ReactiveFormsComponent } from './reactive-forms/reactive-forms.component';
@@ -16,8 +16,11 @@ import { ReactiveFormsComponent } from './reactive-forms/reactive-forms.componen
 
 const AppRoutes:Routes=[
   {path:'',component:ReactiveFormsComponent},
-  {path:'a',component:DirectiveComponent},
-  {path:'b',canActivate:[AuthGuard],component:DirectivesComponent},
+   {path:'a',component:DirectiveComponent},
+  {path:'b',component:DirectivesComponent},
+ // {path:'a',canActivate:[AuthGuard],component:DirectiveComponent},
+ // {path:'b',canActivate:[AuthGuard],component:DirectivesComponent},
+  {path:'d',component:TemplateDrivenComponent},
   //you can pass value to the compoenent form here
 //  {path:'b',canActivate:[AuthGuard],component:DirectivesComponent , data:{message:'page not found'}},
   {path:'c/:id',component:Routes2Component}

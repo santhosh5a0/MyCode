@@ -3,9 +3,13 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Routes,RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
+import { HttpModule } from '@angular/http';
 import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
+import { ShortenPipe } from './shorten.pipe';
+import { FilterPipe } from './filter.pipe';
+import { HttpServicesService } from './http-services.service';
 import { ServersComponent } from './servers/servers.component';
 import { DatabindingComponent } from './databinding/databinding.component';
 import { DirectiveComponent } from './directive-old/directive.component';
@@ -21,14 +25,17 @@ import { RoutesComponent } from './routes/routes.component';
 import { Routes2Component } from './routes/routes2/routes2.component';
 import { AppRoutingModule } from './app-routing.module';
 import {AuthService} from './auth.service'
-import {AuthGuard} from './auth-guard.service';
+//import {AuthGuard} from './auth-guard.service';
 import { ObservableComponent } from './observable/observable.component'
 import {UsersService} from './users.service';
 import { TemplateDrivenComponent } from './template-driven/template-driven.component';
 import { ReactiveFormsComponent } from './reactive-forms/reactive-forms.component';
+import { HttpServiceUserComponent } from './http-service-user/http-service-user.component';
+import { HomeComponent } from './home/home.component';
 
 
 
+ 
 
 @NgModule({
   declarations: [
@@ -48,7 +55,11 @@ import { ReactiveFormsComponent } from './reactive-forms/reactive-forms.componen
     Routes2Component,
     ObservableComponent,
     TemplateDrivenComponent,
-    ReactiveFormsComponent
+    ReactiveFormsComponent,
+    ShortenPipe,
+    FilterPipe,
+    HttpServiceUserComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
@@ -56,9 +67,11 @@ import { ReactiveFormsComponent } from './reactive-forms/reactive-forms.componen
     HttpClientModule,
     ReactiveFormsModule,
   //  RouterModule.forRoot(AppRoutes)
-  AppRoutingModule
+  AppRoutingModule,
+  HttpModule
   ],
-  providers: [AuthService,AuthGuard,UsersService],
+  //AuthGuard
+  providers: [AuthService,UsersService,HttpServicesService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
