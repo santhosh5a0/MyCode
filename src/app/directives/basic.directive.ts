@@ -15,8 +15,8 @@ export class basicDirective implements OnInit  {
 constructor(private elementRef : ElementRef, private renderer:Renderer2){}
 @HostBinding('style.backgroundColor') color='blue'
 ngOnInit() {
-//this.renderer.setStyle(this.elementRef.nativeElement,'background-color','aqua')
-
+//this.renderer.setStyle(this.elementRef.nativeElement,'background-color','aqua');
+ 
 }
 @HostListener('mouseenter') mouseover(eventdata:Event)
 {
